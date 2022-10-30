@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: getChuyenBayDaLat
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/getDAD
+        - id: getMayBay
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/getMayBay
+        - id: getNV
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/getNV
+        - id: getChuyenbay
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/getChuyenBay
